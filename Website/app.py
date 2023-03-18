@@ -1,8 +1,11 @@
 from flask import Flask, render_template, redirect, request, jsonify
+from modelHelper import ModelHelper
 
 # Create an instance of Flask
 app = Flask(__name__)
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
+
+modelHelper = ModelHelper()
 
 # Route to render index.html template using data from Mongo
 @app.route("/")
@@ -34,7 +37,22 @@ def source_data():
 def make_predictions():
     content = request.json["data"]
     print(content)
-    return(jsonify({"ok": True}))
+
+    budget = float(content["budget"])
+    popularity = float(content["popularity"])
+    revenue = float(content["revenue"])
+    runtime = float(content["runtime"])
+    vote_count = float(content["vote_count"])
+    genre = content["genre"]
+    production_company = content["production_company"]
+    production_country = content["production_country"]
+    spoken_language = content["spoken_language"]
+    release_year = float(content["release_year"])
+    release_month = float(content["release_month"])
+    release_is_weekend = int(content["release_is_weekend"])
+
+    preds = modelHelper.makePredictions(budget, popularity, revenue, runtime, vote_count, genre, production_company, production_country, spoken_language, release_year, release_month, release_is_weekend)
+    return(jsonify({"ok": True, "bad_prob": preds["bad_prob"], "good_prob": preds["good_prob"]}))
 
 
 #############################################################

@@ -53,6 +53,12 @@ function makePredictions() {
         success: function(returnedData) {
             // print it
             console.log(returnedData);
+
+            if (returnedData["good_prob"] >0.5) {
+                $("#output").text("You made a good movie!");
+            } else {
+                $("#output").text("You did not make a good movie, sorry. :(");
+            }
         },
         error: function(XMLHttpRequest, textStatus, errorThrown) {
             alert("Status: " + textStatus);
