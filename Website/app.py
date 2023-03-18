@@ -1,4 +1,4 @@
-from flask import Flask, render_template, redirect
+from flask import Flask, render_template, redirect, request, jsonify
 
 # Create an instance of Flask
 app = Flask(__name__)
@@ -29,6 +29,12 @@ def machine_learning():
 def source_data():
     # Return template and data
     return render_template("source_data.html")
+
+@app.route("/makePredictions", methods=["POST"])
+def make_predictions():
+    content = request.json["data"]
+    print(content)
+    return(jsonify({"ok": True}))
 
 
 #############################################################
