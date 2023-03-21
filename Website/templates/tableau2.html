@@ -4,7 +4,6 @@
   <head>
     <meta charset = 'UTF-8'>
     <title>Go to the Movies</title>
-
     <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
@@ -27,14 +26,17 @@
           <li class="nav-item">
             <a class="nav-link" href="/">Home</a>
           </li>
-          <!-- <li class="nav-item">
-            <a class="nav-link" href="map.html">Map</a>
-          </li> -->
-          <li class="nav-item">
-            <a class="nav-link" href="/machine_learning">Machine Learning</a>
+          <li class="nav-item dropdown ">
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+              aria-expanded="false">Tableau</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="/tableau">Visualization 1</a>
+              <a class="dropdown-item" href="/tableau2">Visualization 2</a>
+              <a class="dropdown-item" href="/tableau3">Visualization 3</a>
+            </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/about_us">About Us</a>
+            <a class="nav-link" href="/machine_learning">Machine Learning</a>
           </li>
           <li class="nav-item dropdown ">
             <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true"
@@ -42,7 +44,11 @@
             <div class="dropdown-menu">
               <a class="dropdown-item" href="/source_data">Data Table</a>
               <a class="dropdown-item" href="/works_cited">Work Cited</a>
+              <a class="dropdown-item" href="/pdf">Executive Summary</a>
             </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/about_us">About Us</a>
           </li>
         </ul>
       </div>
@@ -52,11 +58,10 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-md-12 jumbotron text-center">
-            <h1>Volcano Types by Epoch Periods</h1>
+            <h1>Data Visualization</h1>
             <br>
-            <p>The Pleistocene is the geological epoch that lasted from about 2,580,000 to 11,700 years ago, spanning the Earth's most recent period of repeated glaciations.</p>
-            <br>
-            <p>The Holocene is the current geological epoch. It began approximately 11,650 cal years Before Present, after the Last Glacial Period, which concluded with the Holocene glacial retreat. The Holocene and the preceding Pleistocene together form the Quaternary period.</p>
+            <p>This dashboard shows an overview of our data including movie title, genre, popularity, production company, spoken language, and revenue.</p>
+            <p>The filters that can be applied to this graph include genre, spoken language, production company, and release year.</p>
             <br>
           </div>
         </div>

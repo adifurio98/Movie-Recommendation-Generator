@@ -4,7 +4,6 @@
   <head>
     <meta charset = 'UTF-8'>
     <title>Go to the Movies</title>
-
     <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
@@ -27,14 +26,17 @@
           <li class="nav-item">
             <a class="nav-link" href="/">Home</a>
           </li>
-          <!-- <li class="nav-item">
-            <a class="nav-link" href="map.html">Map</a>
-          </li> -->
-          <li class="nav-item">
-            <a class="nav-link" href="/machine_learning">Machine Learning</a>
+          <li class="nav-item dropdown ">
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+              aria-expanded="false">Tableau</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="/tableau">Visualization 1</a>
+              <a class="dropdown-item" href="/tableau2">Visualization 2</a>
+              <a class="dropdown-item" href="/tableau3">Visualization 3</a>
+            </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/about_us">About Us</a>
+            <a class="nav-link" href="/machine_learning">Machine Learning</a>
           </li>
           <li class="nav-item dropdown ">
             <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true"
@@ -42,7 +44,11 @@
             <div class="dropdown-menu">
               <a class="dropdown-item" href="/source_data">Data Table</a>
               <a class="dropdown-item" href="/works_cited">Work Cited</a>
+              <a class="dropdown-item" href="/pdf">Executive Summary</a>
             </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/about_us">About Us</a>
           </li>
         </ul>
       </div>

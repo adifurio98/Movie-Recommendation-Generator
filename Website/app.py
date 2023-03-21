@@ -18,6 +18,11 @@ def about_us():
     # Return template and data
     return render_template("about_us.html")
 
+@app.route("/pdf")
+def pdf():
+    # Return template and data
+    return render_template("pdf.html")
+
 @app.route("/works_cited")
 def works_cited():
     # Return template and data
