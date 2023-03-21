@@ -33,6 +33,21 @@ def source_data():
     # Return template and data
     return render_template("source_data.html")
 
+@app.route("/tableau")
+def tableau():
+    # Return template and data
+    return render_template("tableau.html")
+
+@app.route("/tableau2")
+def tableau2():
+    # Return template and data
+    return render_template("tableau2.html")
+
+@app.route("/tableau3")
+def tableau3():
+    # Return template and data
+    return render_template("tableau3.html")
+
 @app.route("/makePredictions", methods=["POST"])
 def make_predictions():
     content = request.json["data"]
